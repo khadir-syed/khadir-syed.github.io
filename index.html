@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khadir | AI, Enterprise & Cloud Systems</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --bg-base: #0B0A09;
+      --card-bg: #141210;
+      --card-inner: #1C1917;
+      --gold-primary: #F59E0B;
+      --gold-light: #FDE68A;
+      --gold-glow: rgba(245, 158, 11, 0.28);
+    }
+    body {
+      background-color: var(--bg-base);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    /* Brand gold neon halo matching EndCard frame */
+    .brand-frame {
+      box-shadow: 0 0 25px var(--gold-glow), inset 0 0 10px rgba(245, 158, 11, 0.2);
+    }
+    /* Ambient warm backdrop light */
+    .ambient-glow {
+      background: radial-gradient(circle at 50% 18%, rgba(217, 119, 6, 0.15) 0%, rgba(11, 10, 9, 0) 70%);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-stone-100 flex flex-col items-center justify-center p-4 selection:bg-amber-500 selection:text-black ambient-glow">
+
+  <!-- Main Container -->
+  <main class="w-full max-w-md bg-[#141210]/90 border border-amber-500/20 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+    
+    <!-- Profile Header -->
+    <header class="text-center mb-7">
+      
+      <!-- Brand Rounded Frame Matching EndCard -->
+      <div class="relative inline-block mb-4">
+        <div class="w-28 h-28 rounded-[28px] p-[2px] bg-gradient-to-b from-amber-400 via-amber-600 to-stone-900 brand-frame">
+          <img 
+            src="https://github.com/khadir-syed.png" 
+            alt="Khadir Syed" 
+            class="w-full h-full rounded-[26px] object-cover bg-stone-950"
+          />
+        </div>
+      </div>
+      
+      <!-- Handle & Badges -->
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide mb-2">
+        <span>@k_thetechman</span>
+      </div>
+
+      <h1 class="text-2xl font-black tracking-tight text-white uppercase">
+        <span class="text-amber-400">K</span> THE TECHMAN
+      </h1>
+      
+      <p class="text-amber-200/90 font-semibold text-xs tracking-wider uppercase mt-1">
+        Khadir | AI, Enterprise & Cloud Systems
+      </p>
+
+      <!-- Pill Chips for Competencies -->
+      <div class="flex flex-wrap justify-center gap-1.5 mt-3.5">
+        <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-stone-900 border border-stone-800 text-stone-300">Cloud</span>
+        <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-stone-900 border border-stone-800 text-stone-300">Containers</span>
+        <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-stone-900 border border-stone-800 text-stone-300">Kubernetes</span>
+        <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-stone-900 border border-stone-800 text-stone-300">Data & AI</span>
+      </div>
+
+      <!-- Core Hook -->
+      <p class="text-stone-400 text-xs mt-3 italic">
+        "Mental Models. Production Systems. Zero Fluff."
+      </p>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav class="space-y-3" aria-label="Social and professional links">
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@k_thetechman" target="_blank" rel="noopener noreferrer"
+         class="group flex items-center justify-between w-full p-3.5 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-stone-900 transition-all duration-300">
+        <div class="flex items-center space-x-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center group-hover:scale-105 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fa-brands fa-youtube text-lg"></i>
+          </div>
+          <div class="text-left">
+            <span class="block font-bold text-sm text-stone-100 group-hover:text-amber-300 transition-colors">YouTube Channel</span>
+            <span class="block text-xs text-stone-400">Deep dives, architecture & practical AI</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/khadir/" target="_blank" rel="noopener noreferrer"
+         class="group flex items-center justify-between w-full p-3.5 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-stone-900 transition-all duration-300">
+        <div class="flex items-center space-x-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center group-hover:scale-105 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fa-brands fa-linkedin-in text-lg"></i>
+          </div>
+          <div class="text-left">
+            <span class="block font-bold text-sm text-stone-100 group-hover:text-amber-300 transition-colors">LinkedIn Profile</span>
+            <span class="block text-xs text-stone-400">Enterprise architecture & industry insights</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/khadir-syed" target="_blank" rel="noopener noreferrer"
+         class="group flex items-center justify-between w-full p-3.5 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-stone-900 transition-all duration-300">
+        <div class="flex items-center space-x-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center group-hover:scale-105 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fa-brands fa-github text-lg"></i>
+          </div>
+          <div class="text-left">
+            <span class="block font-bold text-sm text-stone-100 group-hover:text-amber-300 transition-colors">GitHub Repositories</span>
+            <span class="block text-xs text-stone-400">Blueprints, cheat sheets & code repos</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/k_thetechman" target="_blank" rel="noopener noreferrer"
+         class="group flex items-center justify-between w-full p-3.5 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-stone-900 transition-all duration-300">
+        <div class="flex items-center space-x-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center group-hover:scale-105 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fa-brands fa-instagram text-lg"></i>
+          </div>
+          <div class="text-left">
+            <span class="block font-bold text-sm text-stone-100 group-hover:text-amber-300 transition-colors">Instagram</span>
+            <span class="block text-xs text-stone-400">Visual carousels & byte-sized tech</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+      </a>
+
+    </nav>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center border-t border-stone-800/80 pt-4">
+      <p class="text-[11px] text-stone-500 tracking-wider uppercase font-medium">
+        Tech Builds a Brighter Tomorrow
+      </p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
