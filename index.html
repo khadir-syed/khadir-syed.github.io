@@ -28,13 +28,13 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 ambient-glow">
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-8 ambient-glow">
 
-  <!-- Centered Card Container -->
-  <main class="w-full max-w-md bg-[#141210] border border-amber-500/20 rounded-3xl p-6 sm:p-8 shadow-2xl mx-auto my-auto">
+  <!-- Main Container -->
+  <main class="w-full max-w-2xl bg-[#141210] border border-amber-500/20 rounded-3xl p-6 sm:p-10 shadow-2xl mx-auto my-6">
     
     <!-- Profile Header -->
-    <header class="text-center mb-7">
+    <header class="text-center mb-8">
       
       <!-- Brand Neon Rounded Avatar Frame -->
       <div class="relative inline-block mb-4">
@@ -55,11 +55,11 @@
       </div>
 
       <!-- Title & Branding -->
-      <h1 class="text-2xl font-black tracking-tight text-white uppercase">
+      <h1 class="text-2xl sm:text-3xl font-black tracking-tight text-white uppercase">
         <span class="text-amber-400">K</span> THE TECHMAN
       </h1>
       
-      <p class="text-amber-200/90 font-semibold text-xs tracking-wider uppercase mt-1">
+      <p class="text-amber-200/90 font-semibold text-xs sm:text-sm tracking-wider uppercase mt-1">
         Khadir | AI, Enterprise & Cloud Systems
       </p>
 
@@ -77,8 +77,8 @@
       </p>
     </header>
 
-    <!-- Links Ordered: Instagram -> YouTube -> LinkedIn -> GitHub -->
-    <nav class="space-y-3" aria-label="Social links">
+    <!-- SECTION: Quick Access Platform Links -->
+    <nav class="space-y-3 mb-10" aria-label="Social links">
 
       <!-- 1. Instagram -->
       <a href="https://www.instagram.com/k_thetechman" target="_blank" rel="noopener noreferrer"
@@ -133,7 +133,7 @@
             <i class="fa-brands fa-github text-lg"></i>
           </div>
           <div class="text-left">
-            <span class="block font-bold text-sm text-stone-100 group-hover:text-amber-300 transition-colors">GitHub Repositories</span>
+            <span class="block font-bold text-sm text-stone-100 group-hover:text-amber-300 transition-colors">GitHub Profile</span>
             <span class="block text-xs text-stone-400">Blueprints, cheat sheets & code repos</span>
           </div>
         </div>
@@ -142,8 +142,134 @@
 
     </nav>
 
+    <!-- SECTION: Featured Architecture Repositories -->
+    <section class="mb-10">
+      <div class="flex items-center justify-between mb-4 border-b border-stone-800/80 pb-2">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-sm"></i> Featured Architecture Repositories
+        </h2>
+        <span class="text-[11px] text-stone-500">Open Source</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        <!-- Repo 1: k_ai-agent-skills -->
+        <a href="https://github.com/khadir-syed/k_ai-agent-skills" target="_blank" rel="noopener noreferrer"
+           class="group flex flex-col justify-between p-4 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-[#24201c] transition-all duration-200">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-robot"></i> k_ai-agent-skills
+              </span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+            </div>
+            <p class="text-xs text-stone-300 leading-relaxed mb-3">
+              Reusable Markdown-based AI skills, explicit boundary definitions, and approval-point orchestrations for Codex, Claude Code & Copilot CLI.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Agentic</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">CLI Skills</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Safety</span>
+          </div>
+        </a>
+
+        <!-- Repo 2: k_ai-basics -->
+        <a href="https://github.com/khadir-syed/k_ai-basics" target="_blank" rel="noopener noreferrer"
+           class="group flex flex-col justify-between p-4 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-[#24201c] transition-all duration-200">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-brain"></i> k_ai-basics
+              </span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+            </div>
+            <p class="text-xs text-stone-300 leading-relaxed mb-3">
+              Grounded, zero-fluff foundational models: token economics, embeddings, chunking strategies, and context-drift evaluation.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Tokens</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Embeddings</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Context</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION: Curated Knowledge Radar -->
+    <section class="mb-4">
+      <div class="flex items-center justify-between mb-4 border-b border-stone-800/80 pb-2">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-2">
+          <i class="fa-solid fa-satellite-dish text-sm"></i> Curated Knowledge Radar
+        </h2>
+        <span class="text-[11px] text-stone-500">Selected Works</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <!-- Radar 1: LinkedIn Analysis -->
+        <a href="https://www.linkedin.com/posts/khadir_ai-didnt-remove-the-work-it-made-part-of-ugcPost-7507931876611981314-7pwa/" target="_blank" rel="noopener noreferrer"
+           class="group p-3.5 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-[#24201c] transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-amber-400 mb-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-stone-400 group-hover:text-amber-300">Analysis</span>
+              <i class="fa-brands fa-linkedin-in text-xs"></i>
+            </div>
+            <h3 class="text-xs font-bold text-stone-100 leading-snug mb-1.5 group-hover:text-amber-300 transition-colors">
+              Faster Drafting Isn't Work Removed
+            </h3>
+            <p class="text-[11px] text-stone-400 leading-normal">
+              AI didn't remove the work—it shifted the assurance and exception handling downstream to engineering.
+            </p>
+          </div>
+          <span class="inline-block mt-3 text-[11px] font-semibold text-amber-400 group-hover:translate-x-0.5 transition-transform">
+            Read Post ➔
+          </span>
+        </a>
+
+        <!-- Radar 2: YouTube Deep Dive -->
+        <a href="https://www.youtube.com/@k_thetechman" target="_blank" rel="noopener noreferrer"
+           class="group p-3.5 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-[#24201c] transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-amber-400 mb-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-stone-400 group-hover:text-amber-300">Deep Dive</span>
+              <i class="fa-brands fa-youtube text-xs"></i>
+            </div>
+            <h3 class="text-xs font-bold text-stone-100 leading-snug mb-1.5 group-hover:text-amber-300 transition-colors">
+              Enterprise AI Beyond the Demo
+            </h3>
+            <p class="text-[11px] text-stone-400 leading-normal">
+              Translating experimental prototypes into resilient, governed cloud platforms.
+            </p>
+          </div>
+          <span class="inline-block mt-3 text-[11px] font-semibold text-amber-400 group-hover:translate-x-0.5 transition-transform">
+            Watch Video ➔
+          </span>
+        </a>
+
+        <!-- Radar 3: Instagram Explainer -->
+        <a href="https://www.instagram.com/reel/DdsqKxqo66v/" target="_blank" rel="noopener noreferrer"
+           class="group p-3.5 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-[#24201c] transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-amber-400 mb-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-stone-400 group-hover:text-amber-300">Visual Note</span>
+              <i class="fa-brands fa-instagram text-xs"></i>
+            </div>
+            <h3 class="text-xs font-bold text-stone-100 leading-snug mb-1.5 group-hover:text-amber-300 transition-colors">
+              Chatbot vs. AI Agent Loop
+            </h3>
+            <p class="text-[11px] text-stone-400 leading-normal">
+              The essential mental model: Goal ➔ Plan ➔ Act ➔ Check ➔ Repeat. Demystifying agentic autonomy.
+            </p>
+          </div>
+          <span class="inline-block mt-3 text-[11px] font-semibold text-amber-400 group-hover:translate-x-0.5 transition-transform">
+            Watch Reel ➔
+          </span>
+        </a>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="mt-8 text-center border-t border-stone-800/80 pt-4">
+    <footer class="mt-8 text-center border-t border-stone-800/80 pt-5">
       <p class="text-[11px] text-stone-500 tracking-wider uppercase font-medium">
         Tech Builds a Brighter Tomorrow
       </p>
