@@ -21,10 +21,10 @@
       padding: 0;
     }
     .brand-frame {
-      box-shadow: 0 0 28px rgba(245, 158, 11, 0.35), inset 0 0 10px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 0 24px rgba(212, 175, 55, 0.28), inset 0 0 8px rgba(212, 175, 55, 0.18);
     }
     .ambient-glow {
-      background: radial-gradient(circle at 50% 15%, rgba(217, 119, 6, 0.18) 0%, rgba(11, 10, 9, 0) 65%);
+      background: radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.14) 0%, rgba(11, 10, 9, 0) 65%);
     }
   </style>
 </head>
@@ -36,13 +36,13 @@
     <!-- Profile Header -->
     <header class="text-center mb-8">
       
-      <!-- Brand Neon Rounded Avatar Frame -->
+      <!-- Studio Tungsten Rounded Avatar Frame -->
       <div class="relative inline-block mb-4">
-        <div class="w-28 h-28 rounded-[28px] p-[2.5px] bg-gradient-to-b from-amber-400 via-amber-500 to-amber-900 brand-frame">
+        <div class="w-28 h-28 rounded-[28px] p-[2px] bg-gradient-to-b from-[#D4AF37] via-[#99792B] to-[#1C1917] brand-frame">
           <img 
             src="https://github.com/khadir-syed.png" 
             alt="Khadir Syed" 
-            class="w-full h-full rounded-[25.5px] object-cover bg-stone-950 block"
+            class="w-full h-full rounded-[26px] object-cover bg-stone-950 block"
           />
         </div>
       </div>
@@ -142,57 +142,89 @@
 
     </nav>
 
-    <!-- SECTION: Featured Architecture Repositories -->
+    <!-- SECTION: Featured Architecture Blueprints -->
     <section class="mb-10">
       <div class="flex items-center justify-between mb-4 border-b border-stone-800/80 pb-2">
         <h2 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-2">
-          <i class="fa-solid fa-layer-group text-sm"></i> Featured Architecture Repositories
+          <i class="fa-solid fa-layer-group text-sm"></i> Featured Architecture Blueprints
         </h2>
-        <span class="text-[11px] text-stone-500">Open Source</span>
+        <span class="text-[11px] text-stone-500">Live Sites & Code</span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-        <!-- Repo 1: k_ai-agent-skills -->
-        <a href="https://github.com/khadir-syed/k_ai-agent-skills" target="_blank" rel="noopener noreferrer"
-           class="group flex flex-col justify-between p-4 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-[#24201c] transition-all duration-200">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Blueprint 1: k_ai-agent-skills -->
+        <div class="flex flex-col justify-between p-4 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/40 transition-all duration-200">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
                 <i class="fa-solid fa-robot"></i> k_ai-agent-skills
               </span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+              <span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                Live Docs
+              </span>
             </div>
             <p class="text-xs text-stone-300 leading-relaxed mb-3">
-              Reusable Markdown-based AI skills, explicit boundary definitions, and approval-point orchestrations for Codex, Claude Code & Copilot CLI.
+              Reusable Markdown-based AI skills, explicit boundary definitions, and approval-point orchestrations for Codex, Claude Code &amp; Copilot CLI.
             </p>
+            <div class="flex flex-wrap gap-1 mb-4">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Agentic</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">CLI Skills</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Safety</span>
+            </div>
           </div>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Agentic</span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">CLI Skills</span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Safety</span>
+          
+          <!-- Dual Action CTAs -->
+          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-stone-800/60">
+            <a href="https://khadir-syed.github.io/k_ai-agent-skills" target="_blank" rel="noopener noreferrer"
+               class="flex items-center justify-center gap-1 text-[11px] font-bold py-2 px-2.5 rounded-xl bg-amber-500 text-black hover:bg-amber-400 transition-colors shadow-sm text-center">
+              <span>Live Site</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+            <a href="https://github.com/khadir-syed/k_ai-agent-skills" target="_blank" rel="noopener noreferrer"
+               class="flex items-center justify-center gap-1.5 text-[11px] font-medium py-2 px-2.5 rounded-xl bg-[#141210] border border-stone-700 text-stone-300 hover:text-white hover:border-stone-500 transition-colors text-center">
+              <i class="fa-brands fa-github text-xs"></i>
+              <span>Source</span>
+            </a>
           </div>
-        </a>
+        </div>
 
-        <!-- Repo 2: k_ai-basics -->
-        <a href="https://github.com/khadir-syed/k_ai-basics" target="_blank" rel="noopener noreferrer"
-           class="group flex flex-col justify-between p-4 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/60 hover:bg-[#24201c] transition-all duration-200">
+        <!-- Blueprint 2: k_ai-basics -->
+        <div class="flex flex-col justify-between p-4 rounded-2xl bg-[#1C1917] border border-stone-800 hover:border-amber-500/40 transition-all duration-200">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
                 <i class="fa-solid fa-brain"></i> k_ai-basics
               </span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-stone-600 group-hover:text-amber-400 transition-colors"></i>
+              <span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                Interactive Guide
+              </span>
             </div>
             <p class="text-xs text-stone-300 leading-relaxed mb-3">
               Grounded, zero-fluff foundational models: token economics, embeddings, chunking strategies, and context-drift evaluation.
             </p>
+            <div class="flex flex-wrap gap-1 mb-4">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Tokens</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Embeddings</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Context</span>
+            </div>
           </div>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Tokens</span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Embeddings</span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-[#141210] border border-stone-800 text-stone-400">Context</span>
+          
+          <!-- Dual Action CTAs -->
+          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-stone-800/60">
+            <a href="https://khadir-syed.github.io/k_ai-basics" target="_blank" rel="noopener noreferrer"
+               class="flex items-center justify-center gap-1 text-[11px] font-bold py-2 px-2.5 rounded-xl bg-amber-500 text-black hover:bg-amber-400 transition-colors shadow-sm text-center">
+              <span>Live Site</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+            <a href="https://github.com/khadir-syed/k_ai-basics" target="_blank" rel="noopener noreferrer"
+               class="flex items-center justify-center gap-1.5 text-[11px] font-medium py-2 px-2.5 rounded-xl bg-[#141210] border border-stone-700 text-stone-300 hover:text-white hover:border-stone-500 transition-colors text-center">
+              <i class="fa-brands fa-github text-xs"></i>
+              <span>Source</span>
+            </a>
           </div>
-        </a>
+        </div>
+
       </div>
     </section>
 
@@ -271,7 +303,7 @@
     <!-- Footer -->
     <footer class="mt-8 text-center border-t border-stone-800/80 pt-5">
       <p class="text-[11px] text-stone-500 tracking-wider uppercase font-medium">
-        Tech Builds a Brighter Tomorrow
+        Architected for scale. Built for production.
       </p>
     </footer>
 
