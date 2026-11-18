@@ -19,6 +19,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <style>
     html, body {
       background-color: #0B0A09 !important;
@@ -304,7 +305,7 @@
       </div>
     </section>
 
-    <!-- SECTION 4: Follow (moved to bottom, compact) -->
+    <!-- SECTION 4: Follow & Share QR -->
     <nav class="mb-2" aria-label="Social links">
       <p class="text-center text-[11px] uppercase tracking-wider text-stone-500 mb-3">Follow along</p>
       <div class="flex justify-center gap-3">
@@ -320,10 +321,23 @@
            class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center hover:scale-105 hover:bg-amber-500 hover:text-black transition-all">
           <i class="fa-brands fa-linkedin-in text-lg"></i>
         </a>
+        <a href="https://www.facebook.com/kthetechman" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+           class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center hover:scale-105 hover:bg-amber-500 hover:text-black transition-all">
+          <i class="fa-brands fa-facebook-f text-lg"></i>
+        </a>
         <a href="https://github.com/khadir-syed" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
            class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center hover:scale-105 hover:bg-amber-500 hover:text-black transition-all">
           <i class="fa-brands fa-github text-lg"></i>
         </a>
+      </div>
+
+      <!-- QR Code Trigger -->
+      <div class="flex justify-center mt-4">
+        <button type="button" id="open-qr-btn"
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C1917] border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-amber-300 text-xs font-medium transition-colors">
+          <i class="fa-solid fa-qrcode text-amber-400 text-xs"></i>
+          <span>Scan or Share Site QR</span>
+        </button>
       </div>
     </nav>
 
@@ -336,12 +350,77 @@
 
   </main>
 
+  <!-- QR Code Modal -->
+  <div id="qr-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
+    <div class="w-full max-w-xs rounded-3xl bg-[#141210] border border-amber-500/30 p-6 text-center shadow-2xl brand-frame relative">
+      <button type="button" id="close-qr-btn" aria-label="Close QR Modal"
+              class="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#1C1917] border border-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <span class="inline-block text-[10px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-2">
+        @k_thetechman
+      </span>
+      <h3 id="qr-modal-title" class="text-base font-black text-white uppercase tracking-tight">
+        Share This Hub
+      </h3>
+      <p class="text-xs text-stone-400 mt-1 mb-4">
+        Point any phone camera to open
+      </p>
+
+      <!-- High-contrast Quiet Zone Container for Reliable Scanning -->
+      <div class="inline-flex items-center justify-center p-3.5 rounded-2xl bg-white border-2 border-[#D4AF37] mx-auto">
+        <div id="site-qrcode"></div>
+      </div>
+
+      <p class="text-[11px] font-mono text-amber-300/90 mt-4">
+        khadir-syed.github.io
+      </p>
+    </div>
+  </div>
+
   <script>
     // Show the email form only once a provider URL is set in data-action.
     (function () {
       var f = document.getElementById('signup');
       var url = f && f.getAttribute('data-action');
       if (url) { f.setAttribute('action', url); f.classList.remove('hidden'); }
+
+      // QR Code Modal Logic
+      var openBtn = document.getElementById('open-qr-btn');
+      var closeBtn = document.getElementById('close-qr-btn');
+      var modal = document.getElementById('qr-modal');
+      var qrContainer = document.getElementById('site-qrcode');
+      var qrGenerated = false;
+
+      openBtn.addEventListener('click', function () {
+        if (!qrGenerated && typeof QRCode !== 'undefined') {
+          new QRCode(qrContainer, {
+            text: 'https://khadir-syed.github.io/',
+            width: 168,
+            height: 168,
+            colorDark: '#111111',
+            colorLight: '#FFFFFF',
+            correctLevel: QRCode.CorrectLevel.H
+          });
+          qrGenerated = true;
+        }
+        modal.classList.remove('hidden');
+      });
+
+      closeBtn.addEventListener('click', function () {
+        modal.classList.add('hidden');
+      });
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) modal.classList.add('hidden');
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+        }
+      });
     })();
   </script>
 </body>
