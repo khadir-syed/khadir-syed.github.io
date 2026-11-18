@@ -42,16 +42,16 @@
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 sm:p-8 ambient-glow">
 
-  <!-- Main Container (relative added for top-right utility positioning) -->
+  <!-- Main Container -->
   <main class="relative w-full max-w-2xl bg-[#141210] border border-amber-500/20 rounded-3xl p-6 sm:p-10 shadow-2xl mx-auto my-6">
 
-    <!-- Top-Right QR Utility Action (Above the Fold, Zero Scroll) -->
+    <!-- Top-Right Share Utility Action -->
     <button type="button" id="open-qr-btn"
-            aria-label="Show Site QR Code"
-            title="Share Hub QR"
-            class="group absolute top-5 right-5 sm:top-6 sm:right-6 inline-flex items-center gap-1.5 h-10 px-3 rounded-full bg-[#1C1917] border border-amber-500/30 hover:border-amber-400 hover:bg-amber-500/10 text-amber-400 transition-all shadow-md">
-      <i class="fa-solid fa-qrcode text-sm"></i>
-      <span class="text-[11px] font-semibold tracking-wide text-stone-200 group-hover:text-amber-300">QR</span>
+            aria-label="Share"
+            title="Share"
+            class="group absolute top-5 right-5 sm:top-6 sm:right-6 inline-flex items-center gap-1.5 h-9 px-3.5 rounded-full bg-[#1C1917] border border-amber-500/30 hover:border-amber-400 hover:bg-amber-500/10 text-amber-400 transition-all shadow-md">
+      <i class="fa-solid fa-arrow-up-from-bracket text-xs"></i>
+      <span class="text-xs font-semibold tracking-wide text-stone-200 group-hover:text-amber-300">Share</span>
     </button>
 
     <!-- Profile Header -->
@@ -350,38 +350,34 @@
 
   </main>
 
-  <!-- QR Code Modal -->
+  <!-- Share / QR Modal -->
   <div id="qr-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
     <div class="w-full max-w-xs rounded-3xl bg-[#141210] border border-amber-500/30 p-6 text-center shadow-2xl brand-frame relative">
-      <button type="button" id="close-qr-btn" aria-label="Close QR Modal"
+      <button type="button" id="close-qr-btn" aria-label="Close Modal"
               class="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#1C1917] border border-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors">
         <i class="fa-solid fa-xmark text-sm"></i>
       </button>
 
-      <span class="inline-block text-[10px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-2">
-        @k_thetechman
+      <span class="inline-block text-[10px] uppercase tracking-wider font-bold px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-2">
+        K THE TECHMAN
       </span>
       <h3 id="qr-modal-title" class="text-base font-black text-white uppercase tracking-tight">
-        Share This Hub
+        Scan to Connect
       </h3>
       <p class="text-xs text-stone-400 mt-1 mb-4">
         Point any phone camera to open
       </p>
 
       <!-- High-contrast Quiet Zone Container for Reliable Scanning -->
-      <div class="inline-flex items-center justify-center p-3.5 rounded-2xl bg-white border-2 border-[#D4AF37] mx-auto">
+      <div class="inline-flex items-center justify-center p-3.5 rounded-2xl bg-white border-2 border-[#D4AF37] mx-auto mb-5">
         <div id="site-qrcode"></div>
       </div>
 
-      <p class="text-[11px] font-mono text-amber-300/90 mt-4 mb-3">
-        khadir-syed.github.io
-      </p>
-
-      <!-- One-Tap Copy Link Fallback -->
+      <!-- One-Tap Copy Link Action -->
       <button type="button" id="copy-link-btn"
-              class="w-full py-2 px-3 rounded-xl bg-[#1C1917] border border-stone-700 hover:border-amber-500/50 text-xs font-semibold text-stone-200 hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5">
+              class="w-full py-2.5 px-3 rounded-xl bg-amber-500 text-black hover:bg-amber-400 text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-sm">
         <i class="fa-regular fa-copy text-xs"></i>
-        <span id="copy-link-text">Copy Hub Link</span>
+        <span id="copy-link-text">Copy Link</span>
       </button>
     </div>
   </div>
@@ -393,7 +389,7 @@
       var url = f && f.getAttribute('data-action');
       if (url) { f.setAttribute('action', url); f.classList.remove('hidden'); }
 
-      // QR Code Modal & Copy Link Logic
+      // Share / QR Modal & Copy Link Logic
       var openBtn = document.getElementById('open-qr-btn');
       var closeBtn = document.getElementById('close-qr-btn');
       var modal = document.getElementById('qr-modal');
@@ -435,8 +431,8 @@
       if (copyBtn && navigator.clipboard) {
         copyBtn.addEventListener('click', function () {
           navigator.clipboard.writeText(hubUrl).then(function () {
-            copyText.textContent = 'Copied!';
-            setTimeout(function () { copyText.textContent = 'Copy Hub Link'; }, 2000);
+            copyText.textContent = 'Link Copied!';
+            setTimeout(function () { copyText.textContent = 'Copy Link'; }, 2000);
           });
         });
       }
